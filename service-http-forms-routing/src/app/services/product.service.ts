@@ -10,14 +10,18 @@ export class ProductService {
 
   constructor() {
 
-    this.products[0] = new Product(1,"iPhone", 75000, "Great Phone", true, 'images/iphone.jpeg');
-    this.products[1] = new Product(2,"Nokia", 5000, "Simple Phone", true, 'images/Nokia.jpeg');
-    this.products[2] = new Product(3,"Samsung", 15000, "Good Phone", true, 'images/Samsung.jpeg');
-    this.products[3] = new Product(4,"Motorola", 25000, "Nice Phone", false, 'images/Motorola.jpeg');   
+    this.products[0] = new Product(1,"iPhone", 75000, "Great Phone", true, 'images/111.png');
+    this.products[1] = new Product(2,"Nokia", 5000, "Simple Phone", true, 'images/222.png');
+    this.products[2] = new Product(3,"Samsung", 15000, "Good Phone", true, 'images/333.png');
+    this.products[3] = new Product(4,"Motorala", 25000, "Nice Phone", false, 'images/444.png');   
 
    }
 
-   getAllProducts():Product[]{
+   getAllProducts():Product[]{  
     return this.products;
+   }
+
+   getProduct(id:number):Product{  
+    return this.products[id];
    }
 }
