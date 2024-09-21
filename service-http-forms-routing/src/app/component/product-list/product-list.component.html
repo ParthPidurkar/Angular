@@ -1,0 +1,13 @@
+<div class="product-grid">
+    <div *ngFor="let prod of products" class="product-card">
+      <img [src]="prod.imagePath" alt="{{prod.name}}" class="product-image">
+      <h3 class="product-name">{{prod.name}}</h3>
+      <p class="product-price">{{prod.price}}</p>
+      <p class="product-description">{{prod.description}}</p>
+      <p class="product-stock" [ngClass]="{'in-stock': prod.inStock, 'out-of-stock': !prod.inStock}">
+        {{prod.inStock ? 'In Stock' : 'Out of Stock'}}
+      </p>
+      <button class="buy-button" [disabled]="!prod.inStock">Buy Now</button>
+    </div>
+  </div>
+  
