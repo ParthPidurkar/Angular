@@ -1,8 +1,28 @@
-
 {
-    "products": [
-      { "id": 1, "name": "HP Laptop", "price": 100000, "description":"HP Gaming Laptop", "inStock": true,  "imagePath":"images/hp.png"},
-      { "id": 2, "name": "Dell Laptop", "price": 200000, "description":"Dell Enterprise Laptop", "inStock": true,  "imagePath":"images/Dell.png" }
-    ]
-  }
-  
+  "products": [
+    {
+      "id": "1",
+      "name": "HP Laptop",
+      "price": 100000,
+      "description": "HP Gaming Laptop",
+      "inStock": true,
+      "imagePath": "images/hp.png"
+    },
+    {
+      "id": 2,
+      "name": "Dell Laptops",
+      "price": 200000,
+      "description": "Dell Enterprise Laptop",
+      "inStock": true,
+      "imagePath": "images/Dell.png"
+    },
+    {
+      "id": "id",
+      "name": "nokia",
+      "price": "500000",
+      "description": "",
+      "inStock": true,
+      "imagePath": "images/hp.png"
+    }
+  ]
+}

@@ -1,4 +1,29 @@
-<product-list>
+<!-- <product-list>
 
   
 </product-list>
+<hr>
+<h2>Add New Product</h2>
+<add-product></add-product> -->
+<H1 style="font-family: Arial, sans-serif; color: #2c3e50; text-align: center; font-size: 2.5em; margin-top: 20px;">
+    Welcome To Estore
+  </H1>
+  
+  <ul style="list-style-type: none; padding: 0; text-align: center;">
+    <li style="display: inline; margin: 0 15px;">
+      <a [routerLink]="['']" style="text-decoration: none; color: #3498db; font-size: 1.2em;">Home</a>
+    </li>
+    <li style="display: inline; margin: 0 15px;">
+      <a [routerLink]="['/add-product']" style="text-decoration: none; color: #3498db; font-size: 1.2em;">Add Product</a>
+    </li>
+    <li style="display: inline; margin: 0 15px;">
+      <a [routerLink]="['/product-list']" style="text-decoration: none; color: #3498db; font-size: 1.2em;">Show Product</a>
+    </li>
+  </ul>
+  
+  <router-outlet></router-outlet>
+  
+  <p style="text-align: center; color: #7f8c8d; font-size: 0.9em; margin-top: 40px;">
+    Copyright Parth 2024
+  </p>
+  

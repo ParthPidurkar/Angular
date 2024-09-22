@@ -7,22 +7,32 @@ import { Product } from '../model/product';
   providedIn: 'root'
 })
 export class HttpBasedProductService {
+ 
 
   apiBaseUrl:string = "http://localhost:3000/products"
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClt: HttpClient) {}
 
+  // READ of CRUD
   getAllProducts():Observable<Product[]> {  
-    return this.http.get<Product[]>(this.apiBaseUrl);   
+    return this.httpClt.get<Product[]>(this.apiBaseUrl);   
    }
-   
-   
 
-    //CHALLENGE: Enhance the HTTPbased product service that will delete a product from the products.
-    deleteProduct(id:number):Observable<void> {  
-      return this.http.delete<void>(this.apiBaseUrl+"/"+id);   
-    }
+   getProduct(productId: string) :Observable<Product>{
+    return this.httpClt.get<Product>(this.apiBaseUrl+"/"+productId); 
+  }
+
+   // Delete of CRUD
+   //CHALLENGE: Enhance the HTTPbased product service that will delete a product from the products.
+   deleteProduct(id:string):Observable<void> {  
+     return this.httpClt.delete<void>(this.apiBaseUrl+"/"+id);   
+   }
+
+   // CREATE of CRUD
+   addProduct(prod:Product):Observable<Product> {  
+    return this.httpClt.post<Product>(this.apiBaseUrl, prod);   
+  }
 
 
 }
